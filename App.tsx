@@ -1,8 +1,8 @@
 import { StyleSheet, Text, SafeAreaView } from 'react-native';
-import ContactUsScreen from './src/screens/ContactUsScreen';
+import HomeScreen from './src/screens/HomeScreen';
 
 export default function App() {
-  return <ContactUsScreen />;
+  return <HomeScreen />;
 }
 
 const styles = StyleSheet.create({
