@@ -1,13 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, SafeAreaView } from 'react-native';
+import ContactUsScreen from './src/screens/ContactUsScreen';
 
 export default function App() {
-  return (
-    <SafeAreaView style={styles.container}>
-      <Text>Hola</Text>
-      <StatusBar style="auto" />
-    </SafeAreaView>
-  );
+  return <ContactUsScreen />;
 }
 
 const styles = StyleSheet.create({
