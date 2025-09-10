@@ -1,8 +1,13 @@
 import { StyleSheet, Text, SafeAreaView } from 'react-native';
-import HomeScreen from './src/screens/HomeScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import MainStackNavigator from './src/navigation/MainStackNavigator';
 
 export default function App() {
-  return <HomeScreen />;
+  return (
+    <NavigationContainer>
+      <MainStackNavigator />
+    </NavigationContainer>
+  );
 }
 
 const styles = StyleSheet.create({

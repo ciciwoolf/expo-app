@@ -1,11 +1,12 @@
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { vs, s } from 'react-native-size-matters';
 import UserAvatar from '../components/UserAvatar';
 import BackButton from '../components/BackButton';
-import SocialSection from '../components/SocialSection';
 import TopTabs from '../components/TopTabs';
 
-const ContactUsScreen = () => {
+const HomeScreen = () => {
+  const navigation = useNavigation();
   return (
     <View style={{ marginTop: vs(50), paddingHorizontal: s(17) }}>
       <View style={styles.header}>
@@ -14,18 +15,25 @@ const ContactUsScreen = () => {
       </View>
 
       <View>
-        <Text style={styles.screenTitle}>Mastering UI</Text>
+        <Text style={styles.screenTitle}>Mastering React Native</Text>
         <Text style={styles.screenSubtitle}>Spanish and Cats are great!</Text>
         <TopTabs />
       </View>
-      <View style={styles.socialContainer}>
-        <SocialSection />
+      <View>
+        <Button
+          title="Go to a Teal Screen"
+          onPress={() => navigation.navigate('TealScreen')}
+        />
+        <Button
+          title="Go to a Dark Screen"
+          onPress={() => navigation.navigate('DarkScreen')}
+        />
       </View>
     </View>
   );
 };
 
-export default ContactUsScreen;
+export default HomeScreen;
 
 const styles = StyleSheet.create({
   header: {
@@ -44,6 +52,7 @@ const styles = StyleSheet.create({
     fontWeight: 'semibold',
     marginTop: vs(20),
     marginStart: s(19),
+    marginEnd: s(19),
   },
   screenSubtitle: {
     fontSize: s(16),
